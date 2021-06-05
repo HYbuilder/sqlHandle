@@ -60,7 +60,7 @@ class sqliteHandle {
                 this.saveValueStr += `,?`;
             } else {
                 data[i] = this.setValueType(data[i]);
-                this.saveValueStr += `,'${data[i]}'`;
+                this.saveValueStr += `,${data[i]}`;
             }
         }
         this.saveFieldStr = '(' + this.ltrim(this.saveFieldStr, ',') + ')'; //组合的字段
